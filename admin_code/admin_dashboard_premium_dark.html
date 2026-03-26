@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AdReward Pro | Premium Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#004119",
+              "on-secondary-fixed-variant": "#005321",
+              "surface": "#0b1326",
+              "on-tertiary-container": "#003115",
+              "primary": "#62df7d",
+              "outline-variant": "#3e4a3d",
+              "surface-container": "#171f33",
+              "surface-container-high": "#222a3d",
+              "surface-container-lowest": "#060e20",
+              "on-primary-fixed-variant": "#005320",
+              "on-tertiary-fixed-variant": "#005227",
+              "secondary-fixed-dim": "#4ae176",
+              "on-secondary-fixed": "#002109",
+              "error": "#ffb4ab",
+              "surface-dim": "#0b1326",
+              "on-error-container": "#ffdad6",
+              "surface-container-low": "#131b2e",
+              "background": "#0b1326",
+              "on-error": "#690005",
+              "primary-fixed": "#7ffc97",
+              "surface-tint": "#62df7d",
+              "primary-container": "#1ca64d",
+              "tertiary-fixed-dim": "#4de082",
+              "inverse-on-surface": "#283044",
+              "on-primary-container": "#003111",
+              "tertiary-container": "#00a755",
+              "outline": "#879485",
+              "surface-bright": "#31394d",
+              "secondary-fixed": "#6bff8f",
+              "secondary-container": "#00b954",
+              "surface-variant": "#2d3449",
+              "on-primary": "#003914",
+              "secondary": "#4ae176",
+              "on-surface-variant": "#bdcaba",
+              "error-container": "#93000a",
+              "primary-fixed-dim": "#62df7d",
+              "on-tertiary-fixed": "#00210c",
+              "on-background": "#dae2fd",
+              "inverse-primary": "#006e2d",
+              "on-surface": "#dae2fd",
+              "on-tertiary": "#003919",
+              "inverse-surface": "#dae2fd",
+              "on-primary-fixed": "#002109",
+              "tertiary-fixed": "#6dfe9c",
+              "surface-container-highest": "#2d3449",
+              "tertiary": "#4de082",
+              "on-secondary": "#003915"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-header { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .bento-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-card:hover { transform: translateY(-2px); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col lg:flex-row">
+<!-- SideNavBar (Desktop) -->
+<aside class="hidden lg:flex flex-col h-screen w-64 bg-slate-900 sticky top-0 py-6 px-4 border-none">
+<div class="mb-10 px-4">
+<h1 class="text-2xl font-black text-emerald-500 uppercase tracking-tighter">AdReward Pro</h1>
+<p class="text-xs font-medium text-slate-500 mt-1 uppercase tracking-widest">Premium Tier</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 bg-slate-800 text-emerald-400 rounded-xl transition-transform active:translate-x-1" href="#"><span class="material-symbols-outlined">dashboard</span>
+<span class="label-md uppercase tracking-wider font-inter">Dashboard</span></a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-100 hover:bg-slate-800 transition-all duration-300" href="#"><span class="material-symbols-outlined">group</span>
+<span class="label-md uppercase tracking-wider font-inter">User Management</span></a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-100 hover:bg-slate-800 transition-all duration-300" href="#"><span class="material-symbols-outlined">ads_click</span>
+<span class="label-md uppercase tracking-wider font-inter">Ads Management</span></a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-100 hover:bg-slate-800 transition-all duration-300" href="#"><span class="material-symbols-outlined">assignment</span>
+<span class="label-md uppercase tracking-wider font-inter">Task Management</span></a><a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-100 hover:bg-slate-800 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="label-md uppercase tracking-wider font-inter">Withdraw Management</span>
+</a><a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-100 hover:bg-slate-800 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="label-md uppercase tracking-wider font-inter">Logout</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-100 hover:bg-slate-800 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="label-md uppercase tracking-wider font-inter">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-4">
+<div class="flex items-center gap-3 mb-6 p-2 rounded-xl bg-slate-800/50">
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-full border border-emerald-500/30" data-alt="Close-up professional portrait of a modern corporate male executive in a sharp suit against a dark studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArhjjaqTwbQChgLOwjVn2TbWM-w9LoCqgzJgcQU0lJ4sK5cDIGM6ApBIxzrScXqo4sdkkArjRs1nxAHEbIyVu6NwgGds12o87qKz23d3bKO0Q9c5hkuw6MLehRVwDUA6p8fvwTvZ0gHTRAp6JsLmMp5x1XACuxXx4q52I_ew67i_xAFle23x3xBUt-rF9ZexwipjoaMSyUlro_wg-FSnFbTOVVecK_Nm3toxO9F6B9B13omYuSJtekTAELR3QBK3LtahaKFxTozA"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Admin User</p>
+<p class="text-[10px] text-slate-500 uppercase">Super Admin</p>
+</div>
+</div>
+<button class="w-full py-3 bg-gradient-to-tr from-primary to-primary-container text-on-primary font-semibold rounded-xl active:scale-95 duration-200">
+                Withdraw
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col min-w-0">
+<!-- TopNavBar (Mobile & Global) -->
+<header class="bg-slate-900/80 backdrop-blur-xl sticky top-0 z-50 flex items-center justify-between px-6 py-3 max-w-full shadow-xl shadow-slate-950/20 border-none">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold tracking-tighter text-emerald-500 dark:text-emerald-400 lg:hidden">AdReward Pro</span>
+<div class="hidden md:flex items-center bg-slate-800/50 rounded-lg px-3 py-1.5 gap-2 border border-slate-700/50">
+<span class="material-symbols-outlined text-slate-400 text-sm">search</span>
+<input class="bg-transparent border-none text-sm focus:ring-0 text-slate-200 w-64" placeholder="Global system search..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2 md:gap-6">
+<nav class="hidden md:flex gap-6">
+<a class="text-emerald-500 font-semibold border-b-2 border-emerald-500 pb-1 font-inter tracking-tight antialiased" href="#">Dashboard</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-colors font-inter tracking-tight antialiased" href="#">Campaigns</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-colors font-inter tracking-tight antialiased" href="#">Analytics</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-colors font-inter tracking-tight antialiased" href="#">History</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-slate-800/50 rounded-lg transition-all active:scale-95 text-slate-400">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 hover:bg-slate-800/50 rounded-lg transition-all active:scale-95 text-slate-400">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="ml-2 px-4 py-1.5 bg-slate-800 rounded-lg text-sm font-semibold text-slate-200 hover:text-white transition-all">
+                        Profile
+                    </button>
+</div>
+</div>
+</header>
+<!-- Dashboard Body -->
+<div class="p-6 md:p-10 max-w-[1600px] mx-auto w-full space-y-10">
+<!-- Hero Title -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="text-3xl font-extrabold tracking-tight text-white mb-1">Platform Ecosystem</h2>
+<p class="text-slate-400 font-medium flex items-center gap-2">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+                        Real-time synchronization active • Last updated 2m ago
+                    </p>
+</div>
+<div class="flex gap-3">
+<button class="px-5 py-2.5 bg-slate-800/50 text-slate-200 rounded-xl font-semibold border border-slate-700/30 hover:bg-slate-800 transition-all">Export JSON</button>
+<button class="px-5 py-2.5 bg-gradient-to-tr from-primary to-primary-container text-on-primary rounded-xl font-bold shadow-lg shadow-primary/20 active:scale-95 transition-all">Audit Logs</button>
+</div>
+</div>
+<!-- Metrics Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Total Users -->
+<div class="bento-card bg-surface-container p-6 rounded-2xl shadow-xl shadow-slate-950/40 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-slate-800 rounded-xl text-primary">
+<span class="material-symbols-outlined">group</span>
+</div>
+<span class="text-primary text-xs font-bold px-2 py-1 bg-primary/10 rounded-full">+12.4%</span>
+</div>
+<div>
+<p class="text-[0.6875rem] uppercase tracking-widest text-slate-500 font-bold mb-1">Total Active Users</p>
+<h3 class="text-3xl font-black text-white tracking-tighter">1,284,592</h3>
+</div>
+</div>
+<!-- Total Distributed -->
+<div class="bento-card bg-surface-container p-6 rounded-2xl shadow-xl shadow-slate-950/40 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-slate-800 rounded-xl text-primary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<span class="text-primary text-xs font-bold px-2 py-1 bg-primary/10 rounded-full">+8.2%</span>
+</div>
+<div>
+<p class="text-[0.6875rem] uppercase tracking-widest text-slate-500 font-bold mb-1">Total Rewards Distributed</p>
+<h3 class="text-3xl font-black text-white tracking-tighter">$4,120,480</h3>
+</div>
+</div>
+<!-- Active Now -->
+<div class="bento-card bg-surface-container p-6 rounded-2xl shadow-xl shadow-slate-950/40 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-slate-800 rounded-xl text-emerald-400">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sensors</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="h-2 w-2 rounded-full bg-primary"></span>
+<span class="text-xs font-bold text-slate-300">LIVE</span>
+</div>
+</div>
+<div>
+<p class="text-[0.6875rem] uppercase tracking-widest text-slate-500 font-bold mb-1">Users Active Now</p>
+<h3 class="text-3xl font-black text-white tracking-tighter">42,810</h3>
+</div>
+</div>
+<!-- Ads Performance -->
+<div class="bento-card bg-surface-container p-6 rounded-2xl shadow-xl shadow-slate-950/40 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-slate-800 rounded-xl text-primary">
+<span class="material-symbols-outlined">ads_click</span>
+</div>
+<span class="text-primary text-xs font-bold px-2 py-1 bg-primary/10 rounded-full">+15.7%</span>
+</div>
+<div>
+<p class="text-[0.6875rem] uppercase tracking-widest text-slate-500 font-bold mb-1">Global CTR Avg</p>
+<h3 class="text-3xl font-black text-white tracking-tighter">3.24%</h3>
+</div>
+</div>
+</div>
+<!-- Analytics & Activity Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Bar Chart Section -->
+<div class="lg:col-span-2 bg-surface-container p-8 rounded-2xl shadow-xl shadow-slate-950/40">
+<div class="flex items-center justify-between mb-10">
+<div>
+<h4 class="text-xl font-bold text-white">Earnings Velocity</h4>
+<p class="text-sm text-slate-500">Daily earnings growth across all segments</p>
+</div>
+<select class="bg-slate-800 border-none rounded-lg text-sm font-semibold text-slate-300 focus:ring-1 focus:ring-primary pr-10">
+<option>Last 14 Days</option>
+<option>Last 30 Days</option>
+<option>Last Quarter</option>
+</select>
+</div>
+<div class="flex items-end justify-between h-64 gap-2 md:gap-4">
+<!-- Bar chart simulation -->
+<div class="flex-1 bg-slate-800/40 rounded-t-lg relative group h-[40%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/20 rounded-t-lg transition-all h-[100%] group-hover:bg-primary/40"></div>
+</div>
+<div class="flex-1 bg-slate-800/40 rounded-t-lg relative group h-[60%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/20 rounded-t-lg transition-all h-[100%] group-hover:bg-primary/40"></div>
+</div>
+<div class="flex-1 bg-slate-800/40 rounded-t-lg relative group h-[55%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/20 rounded-t-lg transition-all h-[100%] group-hover:bg-primary/40"></div>
+</div>
+<div class="flex-1 bg-slate-800/40 rounded-t-lg relative group h-[85%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/20 rounded-t-lg transition-all h-[100%] group-hover:bg-primary/40"></div>
+</div>
+<div class="flex-1 bg-slate-800/40 rounded-t-lg relative group h-[70%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/20 rounded-t-lg transition-all h-[100%] group-hover:bg-primary/40"></div>
+</div>
+<div class="flex-1 bg-slate-800/40 rounded-t-lg relative group h-[95%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/60 rounded-t-lg transition-all h-[100%] group-hover:bg-primary/80"></div>
+</div>
+<div class="flex-1 bg-slate-800/40 rounded-t-lg relative group h-[75%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/20 rounded-t-lg transition-all h-[100%] group-hover:bg-primary/40"></div>
+</div>
+<div class="flex-1 bg-slate-800/40 rounded-t-lg relative group h-[60%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/20 rounded-t-lg transition-all h-[100%] group-hover:bg-primary/40"></div>
+</div>
+<div class="flex-1 bg-slate-800/40 rounded-t-lg relative group h-[80%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/20 rounded-t-lg transition-all h-[100%] group-hover:bg-primary/40"></div>
+</div>
+<div class="flex-1 bg-slate-800/40 rounded-t-lg relative group h-[100%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary/30 rounded-t-lg transition-all h-[100%] group-hover:bg-primary/50"></div>
+</div>
+</div>
+<div class="flex justify-between mt-4 px-2 text-[10px] font-bold text-slate-600 uppercase tracking-widest">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span>Sun</span>
+</div>
+</div>
+<!-- Recent Events Sidebar -->
+<div class="bg-surface-container-low p-8 rounded-2xl shadow-xl">
+<h4 class="text-xl font-bold text-white mb-6">System Health</h4>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-1 bg-primary rounded-full"></div>
+<div>
+<p class="text-sm font-bold text-white mb-0.5">Ad Server Cluster Alpha</p>
+<p class="text-xs text-slate-500">Responding in 14ms (Optimum)</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1 bg-primary rounded-full"></div>
+<div>
+<p class="text-sm font-bold text-white mb-0.5">Payment Gateway</p>
+<p class="text-xs text-slate-500">All nodes operational</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1 bg-tertiary rounded-full"></div>
+<div>
+<p class="text-sm font-bold text-white mb-0.5">Data Warehouse Sync</p>
+<p class="text-xs text-slate-500">Scheduled maintenance in 4h</p>
+</div>
+</div>
+</div>
+<div class="mt-12 p-6 bg-slate-900/50 rounded-2xl border border-slate-700/30">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Momentum Indicator</p>
+<div class="flex items-center gap-3">
+<div class="relative">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+<span class="absolute -top-1 -right-1 flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+</div>
+<div>
+<h5 class="text-lg font-black text-white">+24.2k</h5>
+<p class="text-[10px] text-emerald-400 font-bold uppercase">Reward Pulse High</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Transaction Table -->
+<div class="bg-surface-container rounded-2xl shadow-xl shadow-slate-950/40 overflow-hidden">
+<div class="px-8 py-6 border-b border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<h4 class="text-xl font-bold text-white">Recent System Transactions</h4>
+<div class="flex gap-2">
+<button class="px-3 py-1.5 bg-slate-800 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition-all">Filter: ALL</button>
+<button class="px-3 py-1.5 bg-slate-800 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition-all">View Ledger</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-900/40">
+<th class="px-8 py-4 text-[10px] font-bold text-slate-500 uppercase tracking-widest">Transaction ID</th>
+<th class="px-8 py-4 text-[10px] font-bold text-slate-500 uppercase tracking-widest">Target Entity</th>
+<th class="px-8 py-4 text-[10px] font-bold text-slate-500 uppercase tracking-widest">Type</th>
+<th class="px-8 py-4 text-[10px] font-bold text-slate-500 uppercase tracking-widest text-right">Amount</th>
+<th class="px-8 py-4 text-[10px] font-bold text-slate-500 uppercase tracking-widest text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-800">
+<tr class="hover:bg-slate-800/30 transition-colors">
+<td class="px-8 py-5 text-sm font-mono text-slate-400">TXN-90284-A</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">person</span>
+</div>
+<span class="text-sm font-semibold text-white">Alex Morgan</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm text-slate-400">User Withdrawal</td>
+<td class="px-8 py-5 text-sm font-bold text-white text-right">$450.00</td>
+<td class="px-8 py-5 text-right">
+<span class="text-[10px] font-black px-2 py-1 bg-primary/10 text-primary rounded-md uppercase tracking-tighter">Completed</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-800/30 transition-colors">
+<td class="px-8 py-5 text-sm font-mono text-slate-400">TXN-90285-B</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-emerald-400">
+<span class="material-symbols-outlined text-lg">campaign</span>
+</div>
+<span class="text-sm font-semibold text-white">Global Ads Corp</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm text-slate-400">Campaign Top-up</td>
+<td class="px-8 py-5 text-sm font-bold text-white text-right">$12,500.00</td>
+<td class="px-8 py-5 text-right">
+<span class="text-[10px] font-black px-2 py-1 bg-primary/10 text-primary rounded-md uppercase tracking-tighter">Completed</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-800/30 transition-colors">
+<td class="px-8 py-5 text-sm font-mono text-slate-400">TXN-90286-C</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined text-lg">person</span>
+</div>
+<span class="text-sm font-semibold text-white">Sarah Chen</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm text-slate-400">User Withdrawal</td>
+<td class="px-8 py-5 text-sm font-bold text-white text-right">$125.50</td>
+<td class="px-8 py-5 text-right">
+<span class="text-[10px] font-black px-2 py-1 bg-slate-800 text-slate-400 rounded-md uppercase tracking-tighter">Processing</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-auto w-full py-12 bg-slate-800 flex flex-col md:flex-row justify-between items-center px-12 gap-6 border-t border-slate-700">
+<div class="flex flex-col md:flex-row items-center gap-6">
+<span class="text-lg font-bold text-slate-100">AdReward Pro</span>
+<p class="text-sm text-slate-400 font-inter text-center md:text-left">© 2024 AdReward Pro. The Digital Vault.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-emerald-400 transition-all text-sm font-inter" href="#">Terms</a>
+<a class="text-slate-400 hover:text-emerald-400 transition-all text-sm font-inter" href="#">Privacy</a>
+<a class="text-slate-400 hover:text-emerald-400 transition-all text-sm font-inter" href="#">Support</a>
+<a class="text-slate-400 hover:text-emerald-400 transition-all text-sm font-inter" href="#">API</a>
+</div>
+</footer>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="lg:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-slate-900/95 backdrop-blur-lg border-t border-slate-800 flex justify-around items-center h-20 pb-safe px-4 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+<a class="flex flex-col items-center justify-center text-emerald-400 scale-110 transition-transform touch-manipulation" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 touch-manipulation active:bg-slate-800 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">smart_display</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Ads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 touch-manipulation active:bg-slate-800 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Wallet</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 touch-manipulation active:bg-slate-800 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

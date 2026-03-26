@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Withdraw Management | Emerald Ledger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1326;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        /* Custom scrollbar for deep navy theme */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b1326;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #222a3d;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "secondary-container": "#00b954",
+                "on-tertiary": "#003919",
+                "inverse-surface": "#dae2fd",
+                "secondary-fixed": "#6bff8f",
+                "tertiary": "#4de082",
+                "surface-dim": "#0b1326",
+                "secondary": "#4ae176",
+                "inverse-on-surface": "#283044",
+                "surface-variant": "#2d3449",
+                "surface-container-high": "#222a3d",
+                "primary-fixed": "#7ffc97",
+                "surface-container-lowest": "#060e20",
+                "tertiary-container": "#00a755",
+                "primary-container": "#1ca64d",
+                "surface-container-low": "#131b2e",
+                "surface": "#0b1326",
+                "on-surface": "#dae2fd",
+                "primary": "#62df7d",
+                "on-error-container": "#ffdad6",
+                "on-surface-variant": "#bdcaba",
+                "on-primary-fixed-variant": "#005320",
+                "on-primary-container": "#003111",
+                "background": "#0b1326",
+                "on-secondary-fixed-variant": "#005321",
+                "secondary-fixed-dim": "#4ae176",
+                "inverse-primary": "#006e2d",
+                "on-tertiary-container": "#003115",
+                "outline-variant": "#3e4a3d",
+                "surface-tint": "#62df7d",
+                "on-tertiary-fixed-variant": "#005227",
+                "on-secondary-fixed": "#002109",
+                "on-secondary-container": "#004119",
+                "error": "#ffb4ab",
+                "on-secondary": "#003915",
+                "error-container": "#93000a",
+                "tertiary-fixed": "#6dfe9c",
+                "surface-container-highest": "#2d3449",
+                "surface-container": "#171f33",
+                "primary-fixed-dim": "#62df7d",
+                "on-tertiary-fixed": "#00210c",
+                "on-primary-fixed": "#002109",
+                "on-primary": "#003914",
+                "outline": "#879485",
+                "tertiary-fixed-dim": "#4de082",
+                "on-background": "#dae2fd",
+                "surface-bright": "#31394d",
+                "on-error": "#690005"
+              },
+              fontFamily: {
+                "headline": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface overflow-x-hidden">
+<!-- SideNavBar Component -->
+<aside class="bg-slate-900 dark:bg-[#0b1326] h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-2xl shadow-slate-950/50 flex flex-col py-6 px-4 z-50">
+<div class="mb-10 px-2">
+<h1 class="text-xl font-bold bg-gradient-to-br from-[#62df7d] to-[#1ca64d] bg-clip-text text-transparent tracking-tight">Emerald Ledger</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/60 font-medium">Precision Ad Admin</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 dark:text-[#bdcaba] hover:text-slate-100 hover:bg-slate-800/80 dark:hover:bg-[#222a3d] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 dark:text-[#bdcaba] hover:text-slate-100 hover:bg-slate-800/80 dark:hover:bg-[#222a3d] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="text-sm font-medium">User Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 dark:text-[#bdcaba] hover:text-slate-100 hover:bg-slate-800/80 dark:hover:bg-[#222a3d] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">ads_click</span>
+<span class="text-sm font-medium">Ads Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 dark:text-[#bdcaba] hover:text-slate-100 hover:bg-slate-800/80 dark:hover:bg-[#222a3d] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+<span class="text-sm font-medium">Task Management</span>
+</a>
+<!-- Active State: Withdraw Management -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800 dark:bg-[#171f33] text-green-500 dark:text-[#62df7d] font-semibold border-r-4 border-green-500 scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="text-sm font-medium">Withdraw Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 dark:text-[#bdcaba] hover:text-slate-100 hover:bg-slate-800/80 dark:hover:bg-[#222a3d] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-3 px-2 mb-6">
+<img alt="Admin Profile Picture" class="w-10 h-10 rounded-full object-cover border border-primary/20" data-alt="Close up professional portrait of a male financial executive with a clean-cut look and neutral expression in studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmW9LZQARVDKPeiodaKCRTWHmzhQuVHVzHliJHZYwgOEryKpGhf5js6vb7evzLEsyIVBG9Tpv7DGkNUOK6AqiX-yYpqNUsv8Z_X5nIypXaJP4TwqLMFI428CMFh9THT1cQQ9pmeM-J-Qtzgw83OlADOFykH9s_gPUuRaoVuSOGssOFXWv9HyzA-kprFYYgEskxHXjVpBY18C8ahfgC8EY6tYKCfFsrk0kT9-inVeQjiQdozTkEFa7RxCrZ9u60cAsbU_2TRTjI7Q"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate text-on-surface">Alex Sterling</p>
+<p class="text-xs text-on-surface-variant">Super Admin</p>
+</div>
+</div>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-error/80 hover:text-error hover:bg-error/10 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="text-sm font-medium">Logout</span>
+</a>
+</div>
+</aside>
+<!-- TopNavBar Component -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 z-40 bg-slate-900/60 dark:bg-[#0b1326]/60 backdrop-blur-xl border-b border-slate-800/50 dark:border-[#3e4a3d]/15 flex justify-between items-center px-8">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-semibold text-on-surface tracking-tight">Withdrawal Control Center</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm group-focus-within:text-primary transition-colors">search</span>
+<input class="bg-surface-container-lowest border-none rounded-lg py-2 pl-10 pr-4 text-sm w-64 focus:ring-1 focus:ring-green-500/40 transition-all placeholder:text-on-surface-variant/50" placeholder="Search Request ID or User..." type="text"/>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="hover:text-green-400 transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full border-2 border-surface"></span>
+</button>
+<button class="hover:text-green-400 transition-colors">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 mt-16 p-8 min-h-[calc(100vh-4rem)]">
+<!-- Stats Overview: Bento Style -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+<!-- Metric 1 -->
+<div class="bg-surface-container border border-outline-variant/5 p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-6xl">pending_actions</span>
+</div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Total Pending</p>
+<div class="flex items-end gap-2">
+<h3 class="text-4xl font-extrabold tracking-tighter text-amber-400">142</h3>
+<span class="text-[10px] text-amber-400/60 font-medium mb-2">+12% vs yesterday</span>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-amber-400 rounded-full w-[65%]"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container border border-outline-variant/5 p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform duration-500 text-primary">
+<span class="material-symbols-outlined text-6xl">check_circle</span>
+</div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Approved Today</p>
+<div class="flex items-end gap-2">
+<h3 class="text-4xl font-extrabold tracking-tighter text-primary">84</h3>
+<span class="text-[10px] text-primary/60 font-medium mb-2">98.2% Accuracy</span>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[85%]"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container border border-outline-variant/5 p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform duration-500 text-error">
+<span class="material-symbols-outlined text-6xl">cancel</span>
+</div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Rejected (7D)</p>
+<div class="flex items-end gap-2">
+<h3 class="text-4xl font-extrabold tracking-tighter text-error">29</h3>
+<span class="text-[10px] text-error/60 font-medium mb-2">-4% lower</span>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full w-[20%]"></div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container border border-outline-variant/5 p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Total Paid Out</p>
+<div class="flex items-end gap-2">
+<h3 class="text-4xl font-extrabold tracking-tighter text-on-surface">$14,290</h3>
+</div>
+<div class="mt-4 flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="text-[10px] text-primary font-bold uppercase tracking-tight">Real-time earning activity</span>
+</div>
+</div>
+</div>
+<!-- Filters & Table Section -->
+<div class="bg-surface-container-low rounded-[1.5rem] overflow-hidden">
+<!-- Toolbar -->
+<div class="p-6 flex flex-wrap items-center justify-between gap-4 border-b border-outline-variant/5">
+<div class="flex items-center gap-4">
+<div class="flex items-center bg-surface-container-lowest px-3 py-2 rounded-lg gap-2 text-xs font-medium border border-outline-variant/10">
+<span class="text-on-surface-variant">Filter by Status:</span>
+<select class="bg-transparent border-none text-primary p-0 text-xs focus:ring-0 cursor-pointer">
+<option>All Status</option>
+<option>Pending</option>
+<option>Approved</option>
+<option>Rejected</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-container-lowest px-3 py-2 rounded-lg gap-2 text-xs font-medium border border-outline-variant/10">
+<span class="text-on-surface-variant">Method:</span>
+<select class="bg-transparent border-none text-primary p-0 text-xs focus:ring-0 cursor-pointer">
+<option>All Methods</option>
+<option>JazzCash</option>
+<option>EasyPaisa</option>
+<option>Crypto</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-container-lowest px-3 py-2 rounded-lg gap-2 text-xs font-medium border border-outline-variant/10">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+<span class="text-on-surface-variant">Date Range:</span>
+<button class="text-primary hover:underline">Last 30 Days</button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary hover:bg-primary/20 transition-all rounded-lg text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">download</span>
+                        Export CSV
+                    </button>
+</div>
+</div>
+<!-- Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest/50">
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Request ID</th>
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">User Name</th>
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Amount</th>
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Method</th>
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Request Date</th>
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Status</th>
+<th class="px-6 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors group">
+<td class="px-6 py-4">
+<span class="text-sm font-mono text-on-surface">#WD-98421</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] font-bold text-primary">JD</div>
+<div>
+<p class="text-sm font-semibold text-on-surface">John Doe</p>
+<p class="text-[10px] text-on-surface-variant">john.d@example.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-on-surface">$240.00</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">account_balance_wallet</span>
+<span class="text-sm text-on-surface">JazzCash</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm text-on-surface-variant">Oct 24, 2023 14:20</span>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-400/10 text-amber-400">Pending</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 bg-primary/10 text-primary hover:bg-primary/20 rounded-lg transition-all" title="Approve">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<button class="p-2 bg-error/10 text-error hover:bg-error/20 rounded-lg transition-all" title="Reject">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-on-surface transition-all" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors group">
+<td class="px-6 py-4">
+<span class="text-sm font-mono text-on-surface">#WD-98419</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] font-bold text-secondary">SA</div>
+<div>
+<p class="text-sm font-semibold text-on-surface">Sarah Ahmed</p>
+<p class="text-[10px] text-on-surface-variant">sarah.a@gmail.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-on-surface">$1,050.00</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">currency_bitcoin</span>
+<span class="text-sm text-on-surface">Crypto (USDT)</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm text-on-surface-variant">Oct 24, 2023 11:05</span>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary">Approved</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center justify-end gap-2 opacity-50 pointer-events-none">
+<button class="p-2 rounded-lg"><span class="material-symbols-outlined text-[18px]">check</span></button>
+<button class="p-2 rounded-lg"><span class="material-symbols-outlined text-[18px]">close</span></button>
+<button class="p-2 text-on-surface-variant pointer-events-auto opacity-100 hover:text-on-surface transition-all" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors group">
+<td class="px-6 py-4">
+<span class="text-sm font-mono text-on-surface">#WD-98415</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] font-bold text-on-tertiary">MK</div>
+<div>
+<p class="text-sm font-semibold text-on-surface">Michael K.</p>
+<p class="text-[10px] text-on-surface-variant">mk99@outlook.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-on-surface">$45.00</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">smartphone</span>
+<span class="text-sm text-on-surface">EasyPaisa</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm text-on-surface-variant">Oct 23, 2023 23:50</span>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-error/10 text-error">Rejected</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center justify-end gap-2">
+<span class="text-[10px] text-on-surface-variant italic mr-2">Insufficient Balance</span>
+<button class="p-2 text-on-surface-variant hover:text-on-surface transition-all" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors group">
+<td class="px-6 py-4">
+<span class="text-sm font-mono text-on-surface">#WD-98402</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] font-bold text-amber-500">LB</div>
+<div>
+<p class="text-sm font-semibold text-on-surface">Lisa Brown</p>
+<p class="text-[10px] text-on-surface-variant">lbrown@agency.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-on-surface">$500.00</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">account_balance_wallet</span>
+<span class="text-sm text-on-surface">JazzCash</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm text-on-surface-variant">Oct 23, 2023 18:15</span>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-400/10 text-amber-400">Pending</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 bg-primary/10 text-primary hover:bg-primary/20 rounded-lg transition-all">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<button class="p-2 bg-error/10 text-error hover:bg-error/20 rounded-lg transition-all">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-on-surface transition-all">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-6 flex items-center justify-between border-t border-outline-variant/5">
+<p class="text-xs text-on-surface-variant">Showing <span class="font-bold text-on-surface">1 - 4</span> of 142 requests</p>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface-variant opacity-50 cursor-not-allowed">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary text-xs font-bold">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant text-xs font-bold hover:text-primary transition-all">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant text-xs font-bold hover:text-primary transition-all">3</button>
+<span class="text-on-surface-variant text-xs mx-1">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant text-xs font-bold hover:text-primary transition-all">14</button>
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- System Status & Logs Floating Panel -->
+<div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 bg-surface-container-low p-6 rounded-[1.5rem] border border-outline-variant/5">
+<div class="flex items-center justify-between mb-6">
+<h4 class="text-sm font-bold uppercase tracking-widest text-on-surface">Recent Activity Log</h4>
+<span class="text-[10px] text-primary bg-primary/10 px-2 py-1 rounded font-bold">LIVE UPDATE</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-2 h-2 mt-1.5 rounded-full bg-primary"></div>
+<div class="flex-1">
+<p class="text-sm text-on-surface">Withdrawal #WD-98419 was <span class="text-primary font-bold">Approved</span> by Alex Sterling</p>
+<p class="text-[10px] text-on-surface-variant mt-1">2 minutes ago • IP: 192.168.1.1</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-2 h-2 mt-1.5 rounded-full bg-error"></div>
+<div class="flex-1">
+<p class="text-sm text-on-surface">Withdrawal #WD-98415 was <span class="text-error font-bold">Rejected</span> automatically</p>
+<p class="text-[10px] text-on-surface-variant mt-1">15 minutes ago • Reason: Insufficient Funds</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-2 h-2 mt-1.5 rounded-full bg-amber-400"></div>
+<div class="flex-1">
+<p class="text-sm text-on-surface">New withdrawal request #WD-98421 from John Doe</p>
+<p class="text-[10px] text-on-surface-variant mt-1">45 minutes ago • Amount: $240.00</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-[1.5rem] border border-outline-variant/5 flex flex-col items-center justify-center text-center">
+<div class="mb-4">
+<span class="material-symbols-outlined text-4xl text-primary/40">security</span>
+</div>
+<h4 class="text-sm font-bold text-on-surface mb-2">Gatekeeper Protocol</h4>
+<p class="text-xs text-on-surface-variant mb-6">Automated fraud detection is currently scanning all pending requests. No anomalies detected in the last 24 hours.</p>
+<button class="w-full py-3 bg-primary text-on-primary rounded-xl text-xs font-bold uppercase tracking-wider hover:brightness-110 transition-all shadow-lg shadow-primary/20">
+                    Run Manual Security Scan
+                </button>
+</div>
+</div>
+</main>
+</body></html>

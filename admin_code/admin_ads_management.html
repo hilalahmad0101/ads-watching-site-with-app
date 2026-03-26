@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#0052ff",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#79ff8f",
+              "on-surface": "#191c1e",
+              "secondary-container": "#e0dee8",
+              "inverse-on-surface": "#f0f1f3",
+              "tertiary-fixed": "#69ff87",
+              "primary": "#003ec7",
+              "tertiary-container": "#00762e",
+              "surface-tint": "#004ced",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#002108",
+              "primary-fixed": "#dde1ff",
+              "primary-fixed-dim": "#b7c4ff",
+              "on-secondary-container": "#62626a",
+              "surface-variant": "#e1e2e4",
+              "surface-container-high": "#e7e8ea",
+              "surface-bright": "#f8f9fb",
+              "on-surface-variant": "#434656",
+              "surface-dim": "#d9dadc",
+              "on-tertiary-fixed-variant": "#00531e",
+              "outline": "#737688",
+              "background": "#f8f9fb",
+              "on-primary-container": "#dfe3ff",
+              "tertiary": "#005b21",
+              "inverse-surface": "#2e3132",
+              "inverse-primary": "#b7c4ff",
+              "secondary": "#5d5e66",
+              "on-primary-fixed": "#001452",
+              "surface": "#f8f9fb",
+              "secondary-fixed-dim": "#c6c5cf",
+              "on-primary-fixed-variant": "#0038b6",
+              "surface-container-low": "#f3f4f6",
+              "tertiary-fixed-dim": "#3ce36a",
+              "error": "#ba1a1a",
+              "surface-container-highest": "#e1e2e4",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#edeef0",
+              "on-secondary-fixed": "#1a1b22",
+              "outline-variant": "#c3c5d9",
+              "on-background": "#191c1e",
+              "on-secondary-fixed-variant": "#46464e",
+              "secondary-fixed": "#e3e1eb",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Inter', sans-serif; background-color: #f8f9fb; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      .glass-header { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="text-on-surface antialiased flex min-h-screen">
+<!-- SideNavBar Anchor -->
+<aside class="h-screen w-64 bg-slate-50 dark:bg-slate-950 flex flex-col p-4 gap-2 border-r-0 fixed left-0 top-0 z-50">
+<div class="mb-8 px-2">
+<span class="text-lg font-black text-slate-900 dark:text-white">AdReward Pro</span>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200/50 transition-all duration-200 ease-in-out rounded-xl" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="Inter label-md medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200/50 transition-all duration-200 ease-in-out rounded-xl" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="Inter label-md medium">User Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 rounded-xl shadow-sm transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">ads_click</span>
+<span class="Inter label-md medium">Ads Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200/50 transition-all duration-200 ease-in-out rounded-xl" href="#">
+<span class="material-symbols-outlined">task</span>
+<span class="Inter label-md medium">Task Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200/50 transition-all duration-200 ease-in-out rounded-xl" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="Inter label-md medium">Withdraw Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200/50 transition-all duration-200 ease-in-out rounded-xl" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="Inter label-md medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 space-y-1">
+<div class="p-4 bg-slate-100 dark:bg-slate-900 rounded-xl mb-4">
+<div class="flex items-center gap-3 mb-2">
+<img alt="Profile" class="w-10 h-10 rounded-full object-cover" data-alt="User avatar portrait for Alex Rivers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLT8pkdHrnUCbEAWPCmhKecy11zS7nxF4ROJUkgZWDhLevfhjNOyMP7H66Uxp71M45uj062cDvE_tUHp5tME895aFmdbEZmRATfZxExdYfO4hjfwda1hvClloOJqVXsJs36dGU8HAENQ-7KIpPf7yIBEXb_xjGdj_Djbkor70vc6QBmu_z8T15llAMFtd36giwwNwIJXoTGIxKhKamW1FS2cKvmYm31MLIVUumBVq8qpXSQmOhMbYhhGTbU99uHq5IQRoRyCjx8Q"/>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Alex Rivers</p>
+<p class="text-xs text-slate-500">Gold Member</p>
+</div>
+</div>
+<button class="w-full py-2 bg-primary text-white text-xs font-semibold rounded-lg hover:opacity-90 transition-opacity">Upgrade Tier</button>
+</div>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-red-500" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-64 min-h-screen bg-surface flex flex-col">
+<!-- TopAppBar Anchor -->
+<header class="w-full h-16 sticky top-0 z-40 bg-white/90 backdrop-blur-md flex justify-between items-center px-8 shadow-xl shadow-slate-200/20">
+<div class="flex items-center bg-surface-container-low rounded-full px-4 py-2 w-96 focus-within:ring-2 focus-within:ring-blue-500/20 transition-all">
+<span class="material-symbols-outlined text-slate-400 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder-slate-400" placeholder="Search campaigns..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-slate-100 p-2 rounded-full transition-colors relative">
+<span class="material-symbols-outlined text-slate-600">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="h-8 w-px bg-slate-200"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-600">account_balance_wallet</span>
+<span class="font-bold text-slate-900">$14,250.00</span>
+</div>
+</div>
+</header>
+<!-- Page Body -->
+<div class="p-8 max-w-7xl mx-auto w-full space-y-8">
+<!-- Header Section -->
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<h1 class="text-3xl font-bold tracking-tight text-on-surface">Ads Management</h1>
+<p class="text-on-surface-variant text-sm">Configure and monitor your advertising performance.</p>
+</div>
+<button class="flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3 rounded-full font-semibold shadow-lg shadow-blue-500/20 hover:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">add</span>
+                    Add New Ad
+                </button>
+</div>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-outline-variant/15 transition-all">
+<p class="text-label-md font-medium text-on-surface-variant mb-4">Total Active Ads</p>
+<div class="flex items-end justify-between">
+<h3 class="text-3xl font-bold text-on-surface tracking-tight">24</h3>
+<span class="text-tertiary font-bold text-sm bg-tertiary-fixed/20 px-2 py-1 rounded-lg">+12%</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent">
+<p class="text-label-md font-medium text-on-surface-variant mb-4">Total Impressions</p>
+<div class="flex items-end justify-between">
+<h3 class="text-3xl font-bold text-on-surface tracking-tight">1.2M</h3>
+<span class="text-tertiary font-bold text-sm bg-tertiary-fixed/20 px-2 py-1 rounded-lg">+5.4%</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent">
+<p class="text-label-md font-medium text-on-surface-variant mb-4">Average CTR</p>
+<div class="flex items-end justify-between">
+<h3 class="text-3xl font-bold text-on-surface tracking-tight">4.2%</h3>
+<span class="text-error font-bold text-sm bg-error-container/20 px-2 py-1 rounded-lg">-0.8%</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent">
+<p class="text-label-md font-medium text-on-surface-variant mb-4">Total Distributed Rewards</p>
+<div class="flex items-end justify-between">
+<h3 class="text-3xl font-bold text-on-surface tracking-tight">$8,942</h3>
+<span class="text-tertiary font-bold text-sm bg-tertiary-fixed/20 px-2 py-1 rounded-lg">+18%</span>
+</div>
+</div>
+</div>
+<!-- Management Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border border-transparent">
+<!-- Filter Bar -->
+<div class="p-6 border-b border-surface-container-low flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-4 flex-1 min-w-[300px]">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-low border-none rounded-lg text-sm focus:ring-2 focus:ring-primary/20" placeholder="Search by ad title..." type="text"/>
+</div>
+<select class="bg-surface-container-low border-none rounded-lg text-sm py-2.5 px-4 focus:ring-2 focus:ring-primary/20 min-w-[140px]">
+<option>All Statuses</option>
+<option>Active</option>
+<option>Paused</option>
+<option>Draft</option>
+</select>
+<select class="bg-surface-container-low border-none rounded-lg text-sm py-2.5 px-4 focus:ring-2 focus:ring-primary/20 min-w-[140px]">
+<option>All Types</option>
+<option>Video Ad</option>
+<option>Image Ad</option>
+</select>
+</div>
+<button class="flex items-center gap-2 text-slate-600 hover:bg-slate-100 px-4 py-2.5 rounded-lg transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+                        More Filters
+                    </button>
+</div>
+<!-- Table Content -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant text-[11px] uppercase tracking-widest font-bold">
+<th class="px-8 py-4">Ad Name / Preview</th>
+<th class="px-6 py-4">Type</th>
+<th class="px-6 py-4">Reward / View</th>
+<th class="px-6 py-4">Timer</th>
+<th class="px-6 py-4 text-center">Status</th>
+<th class="px-6 py-4 text-right">Impressions</th>
+<th class="px-8 py-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<!-- Ad Row 1 -->
+<tr class="group hover:bg-surface-bright transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-4">
+<div class="w-16 h-10 rounded-lg overflow-hidden bg-slate-200">
+<img alt="Ad Preview" class="w-full h-full object-cover" data-alt="Cyberpunk style neon advertisement graphic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTZ_dwCino3JuPbcp4MXzbHzWUtXKH8EOhR8UBCxepB1qHYxyCeS91MYlnRsuTAYZbB5f4RFnORJkJYtuDUuJHe_v0OxMnTA0icBiE9nMbu2MMIHjsdYPp2IKnrizo1VLCYdAJht5YvU8Y1JLZQBkbQ36ldiM8QXns3S62o88LjjFV7fcojKZNcBTV09TqbFw7rGmL2kURU2K-UePNNSIfzxX8dBvROwYX7boPHaS-6hkxsW0O25BMsiVXoKrzPhXScfwBGkSDeQ"/>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">Crypto Wallet Pro Hero</p>
+<p class="text-xs text-on-surface-variant">ID: AD-892301</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+                                        Video
+                                    </div>
+</td>
+<td class="px-6 py-5 font-medium text-tertiary text-sm">$0.05</td>
+<td class="px-6 py-5 text-on-surface-variant text-sm">30s</td>
+<td class="px-6 py-5 text-center">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-tertiary-fixed/20 text-on-tertiary-fixed-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mr-2"></span>
+                                        Active
+                                    </span>
+</td>
+<td class="px-6 py-5 text-right font-semibold text-on-surface text-sm">452,001</td>
+<td class="px-8 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-2 hover:bg-error-container/20 rounded-lg text-slate-500 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Ad Row 2 -->
+<tr class="group hover:bg-surface-bright transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-4">
+<div class="w-16 h-10 rounded-lg overflow-hidden bg-slate-200">
+<img alt="Ad Preview" class="w-full h-full object-cover" data-alt="Product photography of a sleek sports shoe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANMdR8YaxtjqOqdTrC5RXlN97LDErolsTtWtOQjfm-xFGif9Gjfne03tW55uhuheU5tJOeoKkKkdt3-PNTctiGjcbUUYOAE1qh_pNr0zlvb873UD2kP9vlYV8K_Rm2xLIM5WtTNKeJrPi-ijilSfVP6S6f8R9ieWjC9YbqydobDiG_Y_zYY05Qc2ZiYHccZFnptKPk3qZrbVlSq0raT49NkX9s4c-8GHGB8PccxhIABuw_r0oDQm9n4qS_XgR0kVdaA1nfuezwIw"/>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">Stride Sports Sneakers</p>
+<p class="text-xs text-on-surface-variant">ID: AD-441029</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">image</span>
+                                        Image
+                                    </div>
+</td>
+<td class="px-6 py-5 font-medium text-tertiary text-sm">$0.02</td>
+<td class="px-6 py-5 text-on-surface-variant text-sm">15s</td>
+<td class="px-6 py-5 text-center">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-orange-700">
+<span class="w-1.5 h-1.5 rounded-full bg-orange-500 mr-2"></span>
+                                        Paused
+                                    </span>
+</td>
+<td class="px-6 py-5 text-right font-semibold text-on-surface text-sm">82,145</td>
+<td class="px-8 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-2 hover:bg-error-container/20 rounded-lg text-slate-500 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Ad Row 3 -->
+<tr class="group hover:bg-surface-bright transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-4">
+<div class="w-16 h-10 rounded-lg overflow-hidden bg-slate-200">
+<img alt="Ad Preview" class="w-full h-full object-cover" data-alt="Minimalist dashboard UI mockup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD-3bMw2uQIjjI5GIYqJ8rYZtFjmzORYT0AM1V6CNMC7yeVV2Gy8nmqKN6yxuyK8kPXjfF6bXBmIA-piD7uVtpSTI9l1X44w_bpGvmyYflZcP-CFcynIHyYfaBCoJOAOWlxUKD_G6cqA8wpnSnZuQhHprKGFqhcNCY4ZSiml8PwEOK0VAFB24dYNhg_ol3-Lc-ylH8vvf4mpusUeoQP1kRdjL-VUNt0nA8iP7U5dC3PIZTMGL86YdLTkJmxDGDh5lRy4G93ba7uQ"/>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">Fintech Dashboard Tool</p>
+<p class="text-xs text-on-surface-variant">ID: AD-110293</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+                                        Video
+                                    </div>
+</td>
+<td class="px-6 py-5 font-medium text-tertiary text-sm">$0.10</td>
+<td class="px-6 py-5 text-on-surface-variant text-sm">60s</td>
+<td class="px-6 py-5 text-center">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400 mr-2"></span>
+                                        Draft
+                                    </span>
+</td>
+<td class="px-6 py-5 text-right font-semibold text-on-surface text-sm">0</td>
+<td class="px-8 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-2 hover:bg-error-container/20 rounded-lg text-slate-500 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer / Pagination -->
+<div class="p-6 bg-surface-container-low/30 flex items-center justify-between">
+<p class="text-xs text-on-surface-variant font-medium">Showing 1-10 of 24 active ads</p>
+<div class="flex items-center gap-2">
+<button class="p-2 bg-surface-container-lowest rounded-lg text-slate-400 hover:text-primary transition-colors shadow-sm">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-lg text-xs font-bold shadow-md shadow-blue-500/20">1</button>
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container-lowest text-on-surface-variant rounded-lg text-xs font-bold hover:bg-surface-container-high transition-colors">2</button>
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container-lowest text-on-surface-variant rounded-lg text-xs font-bold hover:bg-surface-container-high transition-colors">3</button>
+<button class="p-2 bg-surface-container-lowest rounded-lg text-slate-400 hover:text-primary transition-colors shadow-sm">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- System Footer Anchor -->
+<footer class="mt-auto w-full py-12 px-8 bg-slate-50 border-t border-slate-200/50">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<span class="text-lg font-bold text-slate-900 mb-4 block">AdReward Pro</span>
+<p class="text-sm text-slate-500">Editorial Precision in Fintech. Empowering users through rewarding engagement.</p>
+</div>
+<div class="space-y-4">
+<p class="text-xs font-bold uppercase tracking-widest text-slate-400">Platform</p>
+<nav class="flex flex-col gap-2">
+<a class="text-sm text-slate-500 hover:text-slate-900 transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-slate-500 hover:text-slate-900 transition-colors" href="#">Terms of Service</a>
+</nav>
+</div>
+<div class="space-y-4">
+<p class="text-xs font-bold uppercase tracking-widest text-slate-400">Resources</p>
+<nav class="flex flex-col gap-2">
+<a class="text-sm text-slate-500 hover:text-slate-900 transition-colors" href="#">Cookie Policy</a>
+<a class="text-sm text-slate-500 hover:text-slate-900 transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex flex-col justify-end text-right">
+<p class="Inter body-sm text-slate-500">© 2024 AdReward Pro.</p>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

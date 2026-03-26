@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b1326;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #171f33;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #222a3d;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#6dfe9c",
+              "on-tertiary-fixed": "#00210c",
+              "primary": "#62df7d",
+              "outline-variant": "#3e4a3d",
+              "error-container": "#93000a",
+              "on-secondary-fixed": "#002109",
+              "tertiary-container": "#00a755",
+              "surface-bright": "#31394d",
+              "primary-container": "#1ca64d",
+              "surface-tint": "#62df7d",
+              "tertiary-fixed-dim": "#4de082",
+              "surface-container-highest": "#2d3449",
+              "on-surface-variant": "#bdcaba",
+              "inverse-primary": "#006e2d",
+              "surface": "#0b1326",
+              "secondary-fixed": "#6bff8f",
+              "on-secondary": "#003915",
+              "on-primary": "#003914",
+              "primary-fixed-dim": "#62df7d",
+              "surface-container-lowest": "#060e20",
+              "surface-container-low": "#131b2e",
+              "on-error": "#690005",
+              "on-primary-fixed": "#002109",
+              "on-tertiary": "#003919",
+              "error": "#ffb4ab",
+              "surface-variant": "#2d3449",
+              "on-surface": "#dae2fd",
+              "on-error-container": "#ffdad6",
+              "on-secondary-container": "#004119",
+              "on-primary-container": "#003111",
+              "on-background": "#dae2fd",
+              "inverse-on-surface": "#283044",
+              "on-tertiary-container": "#003115",
+              "background": "#0b1326",
+              "on-secondary-fixed-variant": "#005321",
+              "surface-dim": "#0b1326",
+              "primary-fixed": "#7ffc97",
+              "surface-container-high": "#222a3d",
+              "tertiary": "#4de082",
+              "surface-container": "#171f33",
+              "on-primary-fixed-variant": "#005320",
+              "secondary-fixed-dim": "#4ae176",
+              "outline": "#879485",
+              "inverse-surface": "#dae2fd",
+              "secondary": "#4ae176",
+              "on-tertiary-fixed-variant": "#005227",
+              "secondary-container": "#00b954"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+<aside class="h-screen w-64 fixed left-0 top-0 overflow-y-auto bg-slate-950 dark:bg-[#0b1326] shadow-2xl shadow-emerald-900/10 flex flex-col py-6 z-50">
+<div class="px-6 mb-10">
+<h1 class="text-xl font-bold tracking-tighter text-emerald-400 dark:text-[#62df7d]">Emerald Admin</h1>
+<p class="text-[10px] font-['Inter'] tracking-widest text-on-surface-variant/60 uppercase mt-1">System Controller</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-emerald-300 transition-colors font-['Inter'] tracking-tight text-sm font-medium hover:bg-[#171f33] active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-lg">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-emerald-300 transition-colors font-['Inter'] tracking-tight text-sm font-medium hover:bg-[#171f33] active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-lg">group</span>
+                User Management
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-emerald-300 transition-colors font-['Inter'] tracking-tight text-sm font-medium hover:bg-[#171f33] active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-lg">ads_click</span>
+                Ads Management
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-emerald-500/10 text-emerald-400 border-r-2 border-emerald-500 font-['Inter'] tracking-tight text-sm font-medium active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-lg">assignment</span>
+                Task Management
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-emerald-300 transition-colors font-['Inter'] tracking-tight text-sm font-medium hover:bg-[#171f33] active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-lg">payments</span>
+                Withdraw Management
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-emerald-300 transition-colors font-['Inter'] tracking-tight text-sm font-medium hover:bg-[#171f33] active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-lg">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="px-4 mt-auto">
+<a class="flex items-center gap-3 px-4 py-3 text-error/80 hover:text-error transition-colors font-['Inter'] tracking-tight text-sm font-medium active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-lg">logout</span>
+                Logout
+            </a>
+</div>
+</aside>
+<header class="sticky top-0 z-40 w-[calc(100%-16rem)] ml-64 bg-slate-950/60 dark:bg-[#0b1326]/60 backdrop-blur-xl shadow-sm">
+<div class="flex items-center justify-between px-8 h-16">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-black text-emerald-500 dark:text-[#62df7d] uppercase tracking-widest font-['Inter']">Task Management</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-on-surface-variant text-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-['Inter'] tracking-widest uppercase font-bold">System Status: Optimal</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">help_outline</span>
+<div class="w-8 h-8 rounded-lg overflow-hidden border border-outline-variant/30">
+<img alt="Admin Avatar" class="w-full h-full object-cover" data-alt="professional portrait of a tech executive in dark lighting with emerald green highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC82b4pHycSRFj5n6ujjo3mf-uBk1iW_T1qEx4anjiLlT9xl-7rDlmE-UwccepuTIQzSpV-mUqwdTdl57kpYaIHMXKknAhgFZ_t60pBeLbdZ0ft4AkgjepaOPbQFEU_Ux2eRefiY_wSP20_ux_yKU6p9RA6at73x9_P-GNFoIdjafxrSk_pITzF2PrH1fCsOzXzOj_fOmPMx83ufVacQRV2J7QI5VWjA_x-6JqLsbMrUXsvNqdFrRQFPtE0P6RxLd1A5KFd4uDAig"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="ml-64 p-8 w-[calc(100%-16rem)] min-h-screen">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="text-3xl font-bold tracking-tight text-on-surface font-headline">Operations Hub</h3>
+<p class="text-on-surface-variant text-sm mt-1">Monitor, adjust, and deploy system tasks for AdReward Pro members.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-bold text-sm flex items-center gap-2 shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-lg">add</span>
+                Create New Task
+            </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-primary">
+<p class="text-on-surface-variant text-[10px] uppercase tracking-[0.2em] font-bold mb-2">Total Tasks</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-black text-on-surface tracking-tighter">12</span>
+<span class="text-primary text-xs font-bold">+2 New</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-tertiary">
+<p class="text-on-surface-variant text-[10px] uppercase tracking-[0.2em] font-bold mb-2">Active Tasks</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-black text-on-surface tracking-tighter">08</span>
+<span class="text-on-surface-variant text-xs font-medium">Live Now</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-secondary">
+<p class="text-on-surface-variant text-[10px] uppercase tracking-[0.2em] font-bold mb-2">Rewards Distributed</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-black text-on-surface tracking-tighter">$1,240</span>
+<span class="text-secondary text-xs font-bold">↑ 12%</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-outline-variant">
+<p class="text-on-surface-variant text-[10px] uppercase tracking-[0.2em] font-bold mb-2">Avg Completion</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-black text-on-surface tracking-tighter">78%</span>
+<div class="h-1.5 w-16 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[78%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-2xl overflow-hidden shadow-xl">
+<div class="p-6 border-b border-outline-variant/10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg py-2.5 pl-10 pr-4 text-sm focus:ring-1 focus:ring-primary/40 placeholder:text-on-surface-variant/40" placeholder="Search tasks by name or ID..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex bg-surface-container-lowest p-1 rounded-lg">
+<button class="px-4 py-1.5 text-xs font-bold text-on-primary bg-primary rounded-md shadow-sm">All</button>
+<button class="px-4 py-1.5 text-xs font-medium text-on-surface-variant hover:text-on-surface transition-colors">Daily</button>
+<button class="px-4 py-1.5 text-xs font-medium text-on-surface-variant hover:text-on-surface transition-colors">Special</button>
+</div>
+<select class="bg-surface-container-lowest border-none rounded-lg text-xs font-medium text-on-surface px-4 py-2.5 focus:ring-1 focus:ring-primary/40">
+<option>All Status</option>
+<option>Active</option>
+<option>Paused</option>
+<option>Expired</option>
+</select>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container/50">
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-black text-on-surface-variant">Task Details</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-black text-on-surface-variant">Type</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-black text-on-surface-variant text-right">Reward</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-black text-on-surface-variant">Limit</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-black text-on-surface-variant">Status</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-black text-on-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface">Daily Video Check-in</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">ID: TASK-001-VID</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-2.5 py-1 rounded bg-secondary-container/20 text-secondary text-[10px] font-bold uppercase tracking-tight border border-secondary/10">Daily</span>
+</td>
+<td class="px-6 py-5 text-right">
+<span class="text-sm font-bold text-primary">$0.05</span>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs text-on-surface-variant">1 per 24h</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(98,223,125,0.6)]"></span>
+<span class="text-xs font-medium text-primary">Active</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-40 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 hover:bg-surface-container-highest rounded-md text-on-surface-variant hover:text-primary transition-all"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1.5 hover:bg-surface-container-highest rounded-md text-on-surface-variant hover:text-error transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
+<button class="p-1.5 hover:bg-surface-container-highest rounded-md text-on-surface-variant hover:text-secondary transition-all"><span class="material-symbols-outlined text-lg">pause</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface">Weekend Referral Sprint</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">ID: TASK-042-REF</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-2.5 py-1 rounded bg-primary-container/20 text-primary-fixed text-[10px] font-bold uppercase tracking-tight border border-primary/10">Special</span>
+</td>
+<td class="px-6 py-5 text-right">
+<span class="text-sm font-bold text-primary">$5.00</span>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs text-on-surface-variant">Max 5 users</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(98,223,125,0.6)]"></span>
+<span class="text-xs font-medium text-primary">Active</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-40 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 hover:bg-surface-container-highest rounded-md text-on-surface-variant hover:text-primary transition-all"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1.5 hover:bg-surface-container-highest rounded-md text-on-surface-variant hover:text-error transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
+<button class="p-1.5 hover:bg-surface-container-highest rounded-md text-on-surface-variant hover:text-secondary transition-all"><span class="material-symbols-outlined text-lg">pause</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface">Survey: User Demographics</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">ID: TASK-089-SUR</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-2.5 py-1 rounded bg-tertiary-container/20 text-tertiary text-[10px] font-bold uppercase tracking-tight border border-tertiary/10">One-Time</span>
+</td>
+<td class="px-6 py-5 text-right">
+<span class="text-sm font-bold text-primary">$1.50</span>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs text-on-surface-variant">Unlimited</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant/40"></span>
+<span class="text-xs font-medium text-on-surface-variant">Paused</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-40 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 hover:bg-surface-container-highest rounded-md text-on-surface-variant hover:text-primary transition-all"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1.5 hover:bg-surface-container-highest rounded-md text-on-surface-variant hover:text-error transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
+<button class="p-1.5 hover:bg-surface-container-highest rounded-md text-on-surface-variant hover:text-primary transition-all"><span class="material-symbols-outlined text-lg">play_arrow</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface">Flash Promo: App Install</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">ID: TASK-102-APP</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-2.5 py-1 rounded bg-error-container/20 text-error text-[10px] font-bold uppercase tracking-tight border border-error/10">Special</span>
+</td>
+<td class="px-6 py-5 text-right">
+<span class="text-sm font-bold text-primary">$0.75</span>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs text-on-surface-variant">1 per User</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span class="text-xs font-medium text-error">Expired</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-40 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 hover:bg-surface-container-highest rounded-md text-on-surface-variant hover:text-primary transition-all"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1.5 hover:bg-surface-container-highest rounded-md text-on-surface-variant hover:text-error transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
+<button class="p-1.5 hover:bg-surface-container-highest rounded-md text-on-surface-variant hover:text-secondary transition-all opacity-20 cursor-not-allowed"><span class="material-symbols-outlined text-lg">replay</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-4 bg-surface-container/30 flex items-center justify-between border-t border-outline-variant/5">
+<span class="text-xs text-on-surface-variant">Showing 1-4 of 12 Tasks</span>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-container-high rounded-md text-on-surface-variant transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="px-3 py-1 bg-primary text-on-primary rounded-md text-xs font-bold">1</button>
+<button class="px-3 py-1 hover:bg-surface-container-high text-on-surface-variant rounded-md text-xs font-medium transition-colors">2</button>
+<button class="px-3 py-1 hover:bg-surface-container-high text-on-surface-variant rounded-md text-xs font-medium transition-colors">3</button>
+<button class="p-2 hover:bg-surface-container-high rounded-md text-on-surface-variant transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
+<div class="bg-surface-container-low p-6 rounded-2xl relative overflow-hidden group">
+<div class="relative z-10">
+<h4 class="text-lg font-bold mb-1">Quick Deployment</h4>
+<p class="text-on-surface-variant text-xs mb-6">Launch pre-configured task templates instantly.</p>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-surface-container rounded-lg hover:bg-surface-container-high transition-colors cursor-pointer border border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary"><span class="material-symbols-outlined">reviews</span></div>
+<span class="text-sm font-medium">App Store Review</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">bolt</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container rounded-lg hover:bg-surface-container-high transition-colors cursor-pointer border border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-secondary-container/10 flex items-center justify-center text-secondary"><span class="material-symbols-outlined">share</span></div>
+<span class="text-sm font-medium">Social Media Share</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">bolt</span>
+</div>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-9xl">rocket_launch</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<h4 class="text-lg font-bold mb-4">Task Analytics Preview</h4>
+<div class="h-48 flex items-end justify-between gap-2 px-2">
+<div class="w-full bg-primary/20 rounded-t h-[40%] group relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">M</div>
+</div>
+<div class="w-full bg-primary/40 rounded-t h-[65%] group relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">T</div>
+</div>
+<div class="w-full bg-primary/20 rounded-t h-[35%] group relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">W</div>
+</div>
+<div class="w-full bg-primary/80 rounded-t h-[90%] group relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">T</div>
+</div>
+<div class="w-full bg-primary rounded-t h-[75%] group relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">F</div>
+</div>
+<div class="w-full bg-primary-container rounded-t h-[55%] group relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">S</div>
+</div>
+<div class="w-full bg-primary/30 rounded-t h-[45%] group relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">S</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Weekly Performance</span>
+<span class="text-xs text-primary font-bold">Total: 4.2k Completed</span>
+</div>
+</div>
+</div>
+</main>
+</body></html>
