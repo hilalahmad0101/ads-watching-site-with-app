@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#004119",
+              "secondary": "#4ae176",
+              "surface": "#0b1326",
+              "on-error-container": "#ffdad6",
+              "inverse-on-surface": "#283044",
+              "surface-bright": "#31394d",
+              "on-secondary-fixed": "#002109",
+              "outline": "#879485",
+              "on-secondary": "#003915",
+              "surface-dim": "#0b1326",
+              "primary": "#62df7d",
+              "on-primary-fixed": "#002109",
+              "surface-tint": "#62df7d",
+              "primary-container": "#1ca64d",
+              "secondary-container": "#00b954",
+              "on-tertiary-fixed": "#00210c",
+              "surface-container-high": "#222a3d",
+              "on-primary": "#003914",
+              "on-primary-fixed-variant": "#005320",
+              "secondary-fixed": "#6bff8f",
+              "on-background": "#dae2fd",
+              "surface-container-lowest": "#060e20",
+              "on-tertiary-container": "#003115",
+              "tertiary": "#4de082",
+              "primary-fixed": "#7ffc97",
+              "on-tertiary-fixed-variant": "#005227",
+              "on-surface": "#dae2fd",
+              "error": "#ffb4ab",
+              "on-secondary-fixed-variant": "#005321",
+              "on-tertiary": "#003919",
+              "on-surface-variant": "#bdcaba",
+              "surface-container": "#171f33",
+              "tertiary-fixed": "#6dfe9c",
+              "tertiary-container": "#00a755",
+              "primary-fixed-dim": "#62df7d",
+              "on-error": "#690005",
+              "secondary-fixed-dim": "#4ae176",
+              "tertiary-fixed-dim": "#4de082",
+              "surface-variant": "#2d3449",
+              "error-container": "#93000a",
+              "outline-variant": "#3e4a3d",
+              "surface-container-highest": "#2d3449",
+              "background": "#0b1326",
+              "inverse-primary": "#006e2d",
+              "on-primary-container": "#003111",
+              "inverse-surface": "#dae2fd",
+              "surface-container-low": "#131b2e"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #0b1326;
+        color: #dae2fd;
+        font-family: 'Inter', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .glass-header {
+        background: rgba(11, 19, 38, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .recessed-area {
+        background-color: #060e20;
+        box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+      }
+      .emerald-gradient {
+        background: linear-gradient(135deg, #62df7d 0%, #1ca64d 100%);
+      }
+      .pulse-dot {
+        box-shadow: 0 0 8px #62df7d;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b1326]/60 backdrop-blur-xl shadow-[0_40px_40px_-15px_rgba(6,14,32,0.08)] flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#62df7d]">account_balance_wallet</span>
+<span class="font-['Inter'] tracking-tight font-bold text-lg text-[#62df7d]">$1,240.50</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex flex-col items-end">
+<span class="text-[10px] uppercase tracking-widest text-[#bdcaba] font-bold">Session</span>
+<span class="text-sm font-black text-[#62df7d]">$4.25</span>
+</div>
+<button class="hover:bg-[#222a3d] transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#bdcaba]">history</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-20 pb-28 px-4 flex flex-col gap-6 max-w-md mx-auto w-full">
+<!-- Header Messaging -->
+<header class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary pulse-dot animate-pulse"></div>
+<span class="text-secondary-fixed text-xs font-bold uppercase tracking-widest">Active Ad Session</span>
+</div>
+<h1 class="text-3xl font-extrabold tracking-tighter text-on-surface">Premium Stream</h1>
+</header>
+<!-- Focused Ad Player Placeholder -->
+<section class="relative aspect-[9/16] w-full rounded-2xl overflow-hidden bg-surface-container shadow-2xl group">
+<img alt="Cinematic abstract visual with flowing emerald and deep blue neon lights" class="w-full h-full object-cover opacity-60" data-alt="Cinematic abstract visual with flowing emerald and deep blue neon lights, high contrast, smooth motion blur, premium tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbbcYSuojP5ovkJRRPRAZJCsEquRA2_zdboFbDCTLLpHKF3SfEVytOIGmb9BodITzpJJKp-vjiPV9xD3wCL0QR8-gda6-gPmGQqHd5YOjDplJbZM5a-Icv_mYRFp_8kmhBNbYJ-7Z6-QGgEJdgF-I7NB7kNRk3K0jrToWnxeA3G24Ei0rXV6pZfq5XQ-laMQ5GRBsRTJ8lzbOMDyk6D1zgfjxUxuo9NOl3jRcPy17lbJoFV6EI5zgN6OIAYNP6skSsq8ly3QDw0g"/>
+<!-- Video Overlay UI -->
+<div class="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-surface/80 via-transparent to-transparent">
+<!-- Circular Countdown Timer -->
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="absolute w-full h-full -rotate-90">
+<circle cx="64" cy="64" fill="transparent" r="60" stroke="#171f33" stroke-width="6"></circle>
+<circle cx="64" cy="64" fill="transparent" r="60" stroke="#62df7d" stroke-dasharray="377" stroke-dashoffset="100" stroke-width="6"></circle>
+</svg>
+<div class="flex flex-col items-center">
+<span class="text-4xl font-black text-on-surface tracking-tighter">25s</span>
+<span class="text-[10px] font-bold text-primary uppercase tracking-tighter">Remaining</span>
+</div>
+</div>
+<div class="mt-8 bg-surface-container-highest/80 backdrop-blur-md px-4 py-1.5 rounded-full border border-outline-variant/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px] text-primary">security</span>
+<span class="text-[11px] font-bold tracking-widest uppercase text-on-surface-variant">Anti-Skip Active</span>
+</div>
+</div>
+<!-- Reward Pulse Mini-Indicator -->
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 rounded-lg border border-primary/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">monetization_on</span>
+<span class="text-xs font-bold text-primary">+0.50</span>
+</div>
+</div>
+</section>
+<!-- Reward Pending Card -->
+<div class="surface-container-low rounded-xl p-5 flex items-center justify-between border border-outline-variant/10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">generating_tokens</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[11px] font-bold uppercase tracking-widest">Reward Pending</span>
+<span class="text-lg font-black text-on-surface">+0.50 Coins</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] text-outline uppercase font-bold">Multiplier</span>
+<span class="text-secondary-fixed font-bold">1.2x</span>
+</div>
+</div>
+<!-- Action Area -->
+<div class="flex flex-col gap-3">
+<button class="w-full h-14 rounded-xl emerald-gradient opacity-40 cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-on-primary">lock</span>
+<span class="text-on-primary font-bold uppercase tracking-widest">Claim Reward</span>
+</button>
+<p class="text-center text-[10px] text-on-surface-variant/60 px-8">
+                Reward will be available once the anti-skip timer reaches zero. Closing the app now will void current session earnings.
+            </p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<footer class="fixed bottom-0 w-full z-50 bg-[#0b1326] rounded-t-2xl flex justify-around items-center h-20 pb-safe px-4">
+<a class="flex flex-col items-center justify-center text-[#bdcaba] px-4 py-2 hover:text-[#62df7d] transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="text-[11px] font-medium uppercase tracking-wider font-['Inter'] mt-1">Watch</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#bdcaba] px-4 py-2 hover:text-[#62df7d] transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="text-[11px] font-medium uppercase tracking-wider font-['Inter'] mt-1">Tasks</span>
+</a>
+<!-- Active Nav: Ads (Closest to "Watch" logic but as per request 'Ads' highlighted) -->
+<a class="flex flex-col items-center justify-center bg-[#171f33] text-[#62df7d] rounded-xl px-4 py-2 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">ads_click</span>
+<span class="text-[11px] font-medium uppercase tracking-wider font-['Inter'] mt-1">Ads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#bdcaba] px-4 py-2 hover:text-[#62df7d] transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-[11px] font-medium uppercase tracking-wider font-['Inter'] mt-1">Wallet</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#bdcaba] px-4 py-2 hover:text-[#62df7d] transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[11px] font-medium uppercase tracking-wider font-['Inter'] mt-1">Profile</span>
+</a>
+</footer>
+</body></html>

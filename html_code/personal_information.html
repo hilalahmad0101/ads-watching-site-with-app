@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#4ae176",
+              "surface-container": "#171f33",
+              "primary-fixed-dim": "#62df7d",
+              "on-tertiary-fixed-variant": "#005227",
+              "error": "#ffb4ab",
+              "primary-fixed": "#7ffc97",
+              "on-secondary-fixed": "#002109",
+              "on-primary-container": "#003111",
+              "inverse-surface": "#dae2fd",
+              "surface-variant": "#2d3449",
+              "surface": "#0b1326",
+              "primary": "#62df7d",
+              "on-tertiary-container": "#003115",
+              "tertiary-container": "#00a755",
+              "surface-bright": "#31394d",
+              "secondary-fixed-dim": "#4ae176",
+              "outline-variant": "#3e4a3d",
+              "secondary-container": "#00b954",
+              "tertiary-fixed": "#6dfe9c",
+              "on-tertiary-fixed": "#00210c",
+              "on-primary-fixed": "#002109",
+              "inverse-primary": "#006e2d",
+              "on-error-container": "#ffdad6",
+              "background": "#0b1326",
+              "on-surface": "#dae2fd",
+              "on-secondary": "#003915",
+              "surface-dim": "#0b1326",
+              "on-tertiary": "#003919",
+              "surface-container-low": "#131b2e",
+              "error-container": "#93000a",
+              "on-background": "#dae2fd",
+              "tertiary-fixed-dim": "#4de082",
+              "surface-container-lowest": "#060e20",
+              "on-primary-fixed-variant": "#005320",
+              "surface-tint": "#62df7d",
+              "primary-container": "#1ca64d",
+              "on-secondary-fixed-variant": "#005321",
+              "on-primary": "#003914",
+              "surface-container-highest": "#2d3449",
+              "secondary-fixed": "#6bff8f",
+              "outline": "#879485",
+              "tertiary": "#4de082",
+              "on-error": "#690005",
+              "on-secondary-container": "#004119",
+              "on-surface-variant": "#bdcaba",
+              "surface-container-high": "#222a3d",
+              "inverse-on-surface": "#283044"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-header {
+            background: rgba(11, 19, 38, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 glass-header shadow-[0px_4px_40px_rgba(6,14,32,0.08)]">
+<div class="flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-[#62df7d] active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Inter'] font-semibold tracking-tight text-lg text-[#62df7d]">Personal Information</h1>
+</div>
+<div class="text-xl font-bold tracking-tighter text-[#62df7d]">AdReward Pro</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-md mx-auto">
+<!-- Profile Header Section -->
+<section class="flex flex-col items-center mb-10">
+<div class="relative group">
+<div class="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-primary to-primary-container shadow-xl">
+<img alt="User Avatar" class="w-full h-full rounded-full object-cover border-4 border-surface" data-alt="professional headshot of a confident young entrepreneur with clean background soft studio lighting emerald green color accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVaGY24k44iIg--blgEzpKbQEx-Orm9MvunBcbn8X18ui2dqRoL-NXoCXuQMgpDqQ5OXuzzmeG00sfG-5IoAbKaoAD2QkZfrEnz4MUOc1TTKKGecpCgfktNbZJpvTwLZuNarwlnC3wIgo0U4wFYxz6jCQk26k-fXu6JsSfpMriN4jPiv0Y3zvjGqDcgHrtfPxChx-HIwmM99ywlfCr1R0UMfosg-hHfUr8G8pk8n4gEfmk9FGObPohbhm-uxF8O9GlZIUF8KiXYQ"/>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-on-primary p-2 rounded-full shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+</button>
+</div>
+<h2 class="mt-4 text-headline-sm font-bold tracking-tight text-on-surface">Alex Sterling</h2>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+<p class="text-xs font-medium uppercase tracking-widest text-on-surface-variant">Pro Member</p>
+</div>
+</section>
+<!-- Form Section -->
+<div class="space-y-6">
+<!-- Full Name -->
+<div class="group">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Full Name</label>
+<div class="relative flex items-center bg-surface-container-lowest rounded-xl focus-within:ring-1 focus-within:ring-primary/40 transition-all duration-300">
+<div class="pl-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-xl" data-icon="person">person</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface py-4 px-4 font-medium" placeholder="Enter your full name" type="text" value="Alex Sterling"/>
+</div>
+</div>
+<!-- Email Address -->
+<div class="group">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Email Address</label>
+<div class="relative flex items-center bg-surface-container-lowest rounded-xl focus-within:ring-1 focus-within:ring-primary/40 transition-all duration-300">
+<div class="pl-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-xl" data-icon="mail">mail</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface py-4 px-4 font-medium" placeholder="yourname@example.com" type="email" value="alex.sterling@ledger.io"/>
+</div>
+</div>
+<!-- Phone Number -->
+<div class="group">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Phone Number</label>
+<div class="relative flex items-center bg-surface-container-lowest rounded-xl focus-within:ring-1 focus-within:ring-primary/40 transition-all duration-300">
+<div class="pl-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-xl" data-icon="call">call</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface py-4 px-4 font-medium" placeholder="+1 (000) 000-0000" type="tel" value="+1 (555) 234-8890"/>
+</div>
+</div>
+<!-- Security Notice Card (Asymmetric Layout Element) -->
+<div class="mt-8 p-5 bg-surface-container-low rounded-2xl relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-8xl" data-icon="shield">shield</span>
+</div>
+<div class="relative z-10 flex gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-primary" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">Encrypted Data</h4>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Your personal data is encrypted and never shared with third-party advertisers without explicit consent.</p>
+</div>
+</div>
+</div>
+<!-- Save Changes Button -->
+<button class="w-full mt-4 py-4 px-6 bg-gradient-to-tr from-[#62df7d] to-[#1ca64d] text-[#003914] font-bold rounded-xl shadow-[0_8px_24px_rgba(98,223,125,0.2)] active:scale-95 duration-200 flex items-center justify-center gap-2">
+<span>Save Changes</span>
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-2xl bg-[#0b1326] shadow-[0_-8px_24px_rgba(6,14,32,0.1)] border-t border-[#3e4a3d]/15">
+<div class="flex justify-around items-center h-20 px-4 pb-safe w-full">
+<button class="flex flex-col items-center justify-center text-[#bdcaba] opacity-70 hover:text-[#62df7d] transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#bdcaba] opacity-70 hover:text-[#62df7d] transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Tasks</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#bdcaba] opacity-70 hover:text-[#62df7d] transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Ads</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#bdcaba] opacity-70 hover:text-[#62df7d] transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Wallet</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#62df7d] bg-gradient-to-tr from-[#62df7d]/10 to-[#1ca64d]/10 rounded-xl px-3 py-1 active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Profile</span>
+</button>
+</div>
+</nav>
+</body></html>

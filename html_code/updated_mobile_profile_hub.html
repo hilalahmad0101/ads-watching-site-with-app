@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#222a3d",
+              "on-primary": "#003914",
+              "surface-container-low": "#131b2e",
+              "surface-dim": "#0b1326",
+              "on-tertiary-fixed": "#00210c",
+              "on-surface-variant": "#bdcaba",
+              "on-primary-container": "#003111",
+              "on-tertiary-fixed-variant": "#005227",
+              "tertiary": "#4de082",
+              "primary-fixed": "#7ffc97",
+              "secondary-container": "#00b954",
+              "on-error": "#690005",
+              "surface-container-highest": "#2d3449",
+              "outline-variant": "#3e4a3d",
+              "on-primary-fixed-variant": "#005320",
+              "primary-container": "#1ca64d",
+              "on-secondary": "#003915",
+              "error": "#ffb4ab",
+              "background": "#0b1326",
+              "surface-bright": "#31394d",
+              "secondary-fixed-dim": "#4ae176",
+              "primary-fixed-dim": "#62df7d",
+              "tertiary-fixed-dim": "#4de082",
+              "on-tertiary": "#003919",
+              "secondary-fixed": "#6bff8f",
+              "surface-container-lowest": "#060e20",
+              "on-surface": "#dae2fd",
+              "error-container": "#93000a",
+              "inverse-primary": "#006e2d",
+              "on-secondary-fixed-variant": "#005321",
+              "secondary": "#4ae176",
+              "on-background": "#dae2fd",
+              "on-tertiary-container": "#003115",
+              "surface-variant": "#2d3449",
+              "on-primary-fixed": "#002109",
+              "primary": "#62df7d",
+              "on-secondary-fixed": "#002109",
+              "on-error-container": "#ffdad6",
+              "surface-container": "#171f33",
+              "surface": "#0b1326",
+              "on-secondary-container": "#004119",
+              "inverse-on-surface": "#283044",
+              "tertiary-fixed": "#6dfe9c",
+              "outline": "#879485",
+              "surface-tint": "#62df7d",
+              "inverse-surface": "#dae2fd",
+              "tertiary-container": "#00a755"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1326;
+            color: #dae2fd;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="antialiased select-none">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#0b1326]/60 backdrop-blur-xl flex items-center px-4 h-16 w-full">
+<div class="flex items-center gap-4 w-full">
+<button class="text-[#62df7d] active:scale-95 duration-200 p-2 hover:bg-[#222a3d] transition-colors rounded-full">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-['Inter'] tracking-tight font-semibold text-lg text-[#dae2fd]">John Doe</h1>
+<div class="ml-auto">
+<button class="text-[#62df7d] p-2 hover:bg-[#222a3d] transition-colors rounded-full">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-24 px-4 max-w-md mx-auto">
+<!-- Profile Header Section -->
+<section class="flex flex-col items-center py-8 mb-6">
+<div class="relative mb-4">
+<div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-primary to-primary-container">
+<img alt="John Doe" class="w-full h-full rounded-full object-cover border-4 border-surface" data-alt="Close-up professional portrait of a smiling man with clean-shaven face and confident expression, soft studio lighting on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-B8JLPzAi8lAN7jQaIGlA2MUZrqeiWn5URhYd_vQMjaL7Pq6h2z7GkF2WZkeRApz94BTuvGhJlvOTYT9EJ1owa92sDGPFsRi0b4L_8LXmf1lCVOl9wKCRnARe11peivyKTZ5c5MnnVPumICw2gICvW6hZwQaHLuoZr6gFvAZXLJXngHIdqXVpUNhNP5kHJZy9quqPtaehTZMycPt-UThxddteEV_RtydAhZnA74xQa0wXDe-MZiMaTKR_zMTAcbw05QDpOMyrbA"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-on-primary w-8 h-8 rounded-full flex items-center justify-center border-2 border-surface shadow-lg">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<h2 class="text-2xl font-bold tracking-tight text-on-surface mb-1">John Doe</h2>
+<!-- Platinum Badge -->
+<div class="flex items-center gap-2 bg-surface-container px-4 py-1.5 rounded-full border border-outline-variant/15 shadow-sm">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Platinum Member</span>
+</div>
+</section>
+<!-- Stats Bento Grid (Visual Interest) -->
+<div class="grid grid-cols-2 gap-3 mb-8">
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/10">
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-medium mb-1">Total Assets</p>
+<p class="text-lg font-bold text-primary">$12,450.00</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/10">
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-medium mb-1">Referrals</p>
+<p class="text-lg font-bold text-secondary">24 Active</p>
+</div>
+</div>
+<!-- Navigation Menu -->
+<nav class="space-y-2">
+<!-- Section Header -->
+<h3 class="px-2 text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-bold mb-3 opacity-50">Account Management</h3>
+<div class="bg-surface-container-low rounded-2xl overflow-hidden shadow-sm">
+<!-- Personal Info -->
+<button class="w-full flex items-center gap-4 px-5 py-4 hover:bg-surface-container-high transition-colors active:scale-[0.98] duration-200">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<span class="flex-grow text-left text-sm font-medium text-on-surface">Personal Information</span>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40">chevron_right</span>
+</button><!-- Add Payout Account -->
+<button class="w-full flex items-center gap-4 px-5 py-4 hover:bg-surface-container-high transition-colors active:scale-[0.98] duration-200">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="flex-grow text-left text-sm font-medium text-on-surface">Add Payout Account</span>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40">chevron_right</span>
+</button>
+<!-- Wallet -->
+<button class="w-full flex items-center gap-4 px-5 py-4 hover:bg-surface-container-high transition-colors active:scale-[0.98] duration-200">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<span class="flex-grow text-left text-sm font-medium text-on-surface">Wallet &amp; Withdraw</span>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40">chevron_right</span>
+</button>
+<!-- History -->
+<button class="w-full flex items-center gap-4 px-5 py-4 hover:bg-surface-container-high transition-colors active:scale-[0.98] duration-200">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<span class="flex-grow text-left text-sm font-medium text-on-surface">Transaction History</span>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40">chevron_right</span>
+</button>
+<!-- Referrals -->
+<button class="w-full flex items-center gap-4 px-5 py-4 hover:bg-surface-container-high transition-colors active:scale-[0.98] duration-200">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<span class="flex-grow text-left text-sm font-medium text-on-surface">Referral Network</span>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40">chevron_right</span>
+</button>
+</div>
+<!-- Security Section -->
+<h3 class="px-2 pt-6 text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-bold mb-3 opacity-50">Security &amp; Legal</h3>
+<div class="bg-surface-container-low rounded-2xl overflow-hidden shadow-sm">
+<!-- Security -->
+<button class="w-full flex items-center gap-4 px-5 py-4 hover:bg-surface-container-high transition-colors active:scale-[0.98] duration-200">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<span class="flex-grow text-left text-sm font-medium text-on-surface">Security &amp; Password</span>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40">chevron_right</span>
+</button>
+<!-- Privacy -->
+<button class="w-full flex items-center gap-4 px-5 py-4 hover:bg-surface-container-high transition-colors active:scale-[0.98] duration-200">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<span class="flex-grow text-left text-sm font-medium text-on-surface">Privacy Policy</span>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40">chevron_right</span>
+</button>
+<!-- Terms -->
+<button class="w-full flex items-center gap-4 px-5 py-4 hover:bg-surface-container-high transition-colors active:scale-[0.98] duration-200">
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined">description</span>
+</div>
+<span class="flex-grow text-left text-sm font-medium text-on-surface">Terms of Service</span>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40">chevron_right</span>
+</button>
+</div>
+<!-- Logout -->
+<div class="pt-6 pb-4">
+<button class="w-full flex items-center justify-center gap-2 px-5 py-4 bg-error-container/20 text-error rounded-2xl font-semibold transition-all active:scale-[0.98] border border-error/10">
+<span class="material-symbols-outlined">logout</span>
+<span>Logout</span>
+</button>
+</div>
+</nav>
+</main>
+<!-- Bottom Navigation Bar (Based on Shared Components) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-2xl bg-[#0b1326] border-t border-[#3e4a3d]/15 shadow-[0_-4px_40px_rgba(6,14,32,0.08)] flex justify-around items-center h-20 px-2 pb-safe">
+<a class="flex flex-col items-center justify-center text-[#bdcaba] opacity-60 transition-all duration-300 ease-out hover:text-[#62df7d]" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-medium mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#bdcaba] opacity-60 transition-all duration-300 ease-out hover:text-[#62df7d]" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-medium mt-1">Tasks</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#bdcaba] opacity-60 transition-all duration-300 ease-out hover:text-[#62df7d]" href="#">
+<span class="material-symbols-outlined">ads_click</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-medium mt-1">Ads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#bdcaba] opacity-60 transition-all duration-300 ease-out hover:text-[#62df7d]" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-medium mt-1">Wallet</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#62df7d] bg-[#171f33] rounded-xl px-3 py-1 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-medium mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#7ffc97",
+              "secondary": "#4ae176",
+              "primary-fixed-dim": "#62df7d",
+              "surface": "#0b1326",
+              "on-background": "#dae2fd",
+              "on-tertiary-fixed": "#00210c",
+              "on-secondary": "#003915",
+              "secondary-container": "#00b954",
+              "inverse-surface": "#dae2fd",
+              "primary-container": "#1ca64d",
+              "primary": "#62df7d",
+              "surface-container-lowest": "#060e20",
+              "inverse-primary": "#006e2d",
+              "tertiary-fixed-dim": "#4de082",
+              "surface-container-highest": "#2d3449",
+              "error-container": "#93000a",
+              "secondary-fixed-dim": "#4ae176",
+              "secondary-fixed": "#6bff8f",
+              "on-primary": "#003914",
+              "inverse-on-surface": "#283044",
+              "on-tertiary-fixed-variant": "#005227",
+              "surface-container-low": "#131b2e",
+              "on-secondary-fixed": "#002109",
+              "on-primary-container": "#003111",
+              "on-error": "#690005",
+              "background": "#0b1326",
+              "surface-variant": "#2d3449",
+              "on-surface-variant": "#bdcaba",
+              "error": "#ffb4ab",
+              "surface-dim": "#0b1326",
+              "surface-bright": "#31394d",
+              "on-primary-fixed-variant": "#005320",
+              "surface-container-high": "#222a3d",
+              "on-surface": "#dae2fd",
+              "tertiary-container": "#00a755",
+              "surface-container": "#171f33",
+              "outline-variant": "#3e4a3d",
+              "on-secondary-container": "#004119",
+              "tertiary-fixed": "#6dfe9c",
+              "outline": "#879485",
+              "surface-tint": "#62df7d",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#005321",
+              "on-primary-fixed": "#002109",
+              "tertiary": "#4de082",
+              "on-tertiary": "#003919",
+              "on-tertiary-container": "#003115"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(11, 19, 38, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .recessed-input {
+            background-color: #060e20;
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #62df7d 0%, #1ca64d 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col">
+<!-- Top Navigation Anchor (Suppressing Full Nav for Transactional Screen) -->
+<header class="fixed top-0 w-full z-50 glass-header flex items-center justify-between px-6 py-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="payments">payments</span>
+<h1 class="text-xl font-black text-primary tracking-tighter">Emerald Ledger</h1>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</header>
+<main class="flex-1 px-6 pt-24 pb-12 max-w-md mx-auto w-full">
+<!-- Hero Section -->
+<div class="mb-10 mt-4">
+<h2 class="text-4xl font-extrabold tracking-tight text-on-surface leading-tight">Create Account</h2>
+<p class="text-on-surface-variant mt-2 font-medium">Join AdReward Pro and start earning today.</p>
+</div>
+<!-- Registration Form -->
+<div class="space-y-6">
+<!-- Full Name -->
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant ml-1">Full Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl" data-icon="person">person</span>
+<input class="w-full h-14 pl-12 pr-4 recessed-input border-none rounded-xl focus:ring-1 focus:ring-primary/40 text-on-surface placeholder:text-on-surface-variant/40 transition-all" placeholder="John Doe" type="text"/>
+</div>
+</div>
+<!-- Email -->
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant ml-1">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl" data-icon="mail">mail</span>
+<input class="w-full h-14 pl-12 pr-4 recessed-input border-none rounded-xl focus:ring-1 focus:ring-primary/40 text-on-surface placeholder:text-on-surface-variant/40 transition-all" placeholder="name@example.com" type="email"/>
+</div>
+</div>
+<!-- Password Grid -->
+<div class="grid grid-cols-1 gap-6">
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant ml-1">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl" data-icon="lock">lock</span>
+<input class="w-full h-14 pl-12 pr-4 recessed-input border-none rounded-xl focus:ring-1 focus:ring-primary/40 text-on-surface placeholder:text-on-surface-variant/40 transition-all" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant ml-1">Confirm Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl" data-icon="shield">shield</span>
+<input class="w-full h-14 pl-12 pr-4 recessed-input border-none rounded-xl focus:ring-1 focus:ring-primary/40 text-on-surface placeholder:text-on-surface-variant/40 transition-all" placeholder="••••••••" type="password"/>
+</div>
+</div>
+</div>
+<!-- Terms -->
+<div class="flex items-start gap-3 py-2">
+<div class="relative flex items-center h-5">
+<input class="w-5 h-5 rounded border-outline-variant bg-surface-container-lowest text-primary focus:ring-offset-surface focus:ring-primary" id="terms" type="checkbox"/>
+</div>
+<label class="text-sm text-on-surface-variant leading-tight" for="terms">
+                    I agree to the <span class="text-primary font-semibold">Terms of Service</span> and <span class="text-primary font-semibold">Privacy Policy</span>.
+                </label>
+</div>
+<!-- Primary CTA -->
+<button class="w-full h-14 primary-gradient text-on-primary font-bold rounded-xl shadow-lg shadow-primary-container/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                Sign Up
+                <span class="material-symbols-outlined text-xl" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<!-- Divider -->
+<div class="relative py-4 flex items-center gap-4">
+<div class="flex-1 h-[1px] bg-outline-variant/20"></div>
+<span class="text-[10px] font-black uppercase tracking-widest text-on-surface-variant/60">Or Register With</span>
+<div class="flex-1 h-[1px] bg-outline-variant/20"></div>
+</div>
+<!-- Social Buttons -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 h-14 bg-surface-container rounded-xl border border-outline-variant/10 hover:bg-surface-container-high transition-colors text-on-surface font-medium">
+<img alt="Google" class="w-5 h-5" data-alt="Official Google G logo with signature multi-colored aesthetic on transparent background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZQvOjXXT7Mj7sOFUbu4rXThYf1RuPjI-qDmz25jF1z9nuTPpwKzVklmTLR9TYOnPoluMAsD294VajEyHRhoy_bhNb68MiunBIFkp2LB4Eab6tck1unn5hh2sARrisA4LZJzjGrHsd75G7ZMm3NVk1ukT8YJrHzgBeFMW2Fcb-v11_y9bvukIqQPmck0yrf0REzw10G-TQZZrUjJgno4WPir69SpSzw5yD1CZUoK-XQ-jADF7hl59LDTFBaiN1LowSSpmtzilVOA"/>
+                    Google
+                </button>
+<button class="flex items-center justify-center gap-2 h-14 bg-surface-container rounded-xl border border-outline-variant/10 hover:bg-surface-container-high transition-colors text-on-surface font-medium">
+<span class="material-symbols-outlined text-[#1877F2]" data-icon="facebook" style="font-variation-settings: 'FILL' 1;">social_leaderboard</span>
+                    Facebook
+                </button>
+</div>
+</div>
+<!-- Footer Link -->
+<div class="mt-12 text-center">
+<p class="text-on-surface-variant">
+                Already have an account? 
+                <a class="text-primary font-bold ml-1 hover:underline" href="#">Log In</a>
+</p>
+</div>
+</main>
+<!-- Visual Polish: Accent Glow -->
+<div class="fixed bottom-0 left-0 w-full h-64 pointer-events-none opacity-20" style="background: radial-gradient(circle at 50% 100%, #62df7d 0%, transparent 70%);">
+</div>
+<!-- Background Decoration Image -->
+<div class="fixed top-20 right-[-10%] w-64 h-64 opacity-5 pointer-events-none">
+<img alt="Abstract background" class="w-full h-full object-contain" data-alt="Abstract fluid 3D geometric shapes in shades of emerald green and dark slate with soft metallic highlights and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9g7j7jvqXimAQ4_Jl_CSK_24ggm5rXuJTbmPzJgqzhy-nPIt7MNE2Vsouugtd6AUBZGmNhT-8FGX2pcprh8alFIrJoZ8ZqoA945BqUYVvxC17WZtl_5CgRxNQ34adQXP-n47VoYImA0TpWT0C3fqow1Om9tFoqu00G00VXFl8iOVG-31YSy08xhiJ4L1DHfdvPksKgVNu5TBzCAKxUhBiz-j-2u2UaHIfaDearZkt6BQqr5SJrYwsw6INsHuW5mqteIXiPln65w"/>
+</div>
+</body></html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-container": "#00a755",
+            "surface-container-high": "#222a3d",
+            "on-tertiary-fixed": "#00210c",
+            "tertiary-fixed-dim": "#4de082",
+            "surface": "#0b1326",
+            "on-error-container": "#ffdad6",
+            "secondary": "#4ae176",
+            "primary": "#62df7d",
+            "on-secondary": "#003915",
+            "outline-variant": "#3e4a3d",
+            "on-secondary-fixed-variant": "#005321",
+            "surface-container-lowest": "#060e20",
+            "on-primary-container": "#003111",
+            "secondary-fixed": "#6bff8f",
+            "on-error": "#690005",
+            "secondary-container": "#00b954",
+            "surface-container-low": "#131b2e",
+            "surface-bright": "#31394d",
+            "on-surface": "#dae2fd",
+            "on-secondary-container": "#004119",
+            "on-primary-fixed-variant": "#005320",
+            "inverse-primary": "#006e2d",
+            "primary-fixed": "#7ffc97",
+            "surface-container": "#171f33",
+            "surface-container-highest": "#2d3449",
+            "tertiary-fixed": "#6dfe9c",
+            "primary-container": "#1ca64d",
+            "primary-fixed-dim": "#62df7d",
+            "surface-variant": "#2d3449",
+            "on-primary-fixed": "#002109",
+            "on-background": "#dae2fd",
+            "secondary-fixed-dim": "#4ae176",
+            "outline": "#879485",
+            "on-tertiary": "#003919",
+            "on-tertiary-container": "#003115",
+            "on-primary": "#003914",
+            "background": "#0b1326",
+            "surface-tint": "#62df7d",
+            "on-surface-variant": "#bdcaba",
+            "on-secondary-fixed": "#002109",
+            "inverse-on-surface": "#283044",
+            "surface-dim": "#0b1326",
+            "on-tertiary-fixed-variant": "#005227",
+            "error": "#ffb4ab",
+            "tertiary": "#4de082",
+            "inverse-surface": "#dae2fd",
+            "error-container": "#93000a"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body { font-family: 'Inter', sans-serif; background-color: #0b1326; color: #dae2fd; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .glass-effect { background: rgba(11, 19, 38, 0.6); backdrop-filter: blur(20px); }
+    .metallic-gradient { background: linear-gradient(135deg, #62df7d 0%, #1ca64d 100%); }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0b1326]/60 backdrop-blur-xl flex items-center px-6 h-16 w-full max-w-none shadow-none">
+<div class="flex items-center gap-4">
+<button class="text-[#62df7d] hover:bg-[#222a3d] transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-[#dae2fd] font-bold font-['Inter'] font-semibold tracking-tight text-lg">Add Account</h1>
+</div>
+</header>
+<main class="pt-20 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Hero Visualization -->
+<section class="relative h-48 rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover opacity-60" data-alt="abstract 3D liquid metallic green spheres floating in a deep dark blue cinematic environment with soft focus lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiJk4SGZz4q-QUY1pg4rYNhe7UNLl8xuS5EGyOxZLyvSsa6x8-f4vABm-MIwQuTCDUMH9Bjh9onvHy9-ZLkafV4qeGqhR5pS_A386vwD7RccA0RODb9XJN5IQzvVrlTv5xXd4g18JSks5U3vq_E7kWWLE7ji64LsJlNBZ_9wW373yjibVBt2SXZC-KYtkGAX9VH8jO5m55OV2PPiLAhGZUiX6ZUd2KhgXTiO0PfCVHsEnaOuBDMEz99vOyLXtPOy8alRWbyoQpbw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<p class="text-primary font-medium tracking-widest text-xs uppercase mb-1">Secure Payouts</p>
+<h2 class="text-3xl font-extrabold tracking-tighter text-on-surface">Digital Assets Vault</h2>
+</div>
+</section>
+<!-- Method Selection (Asymmetric Layout) -->
+<section class="space-y-4">
+<label class="block text-label-md uppercase tracking-wider text-on-surface-variant font-semibold ml-1">Select Payout Method</label>
+<div class="grid grid-cols-12 gap-4">
+<!-- JazzCash -->
+<button class="col-span-12 md:col-span-4 group relative flex flex-col items-start p-5 rounded-xl bg-surface-container border border-outline-variant/15 hover:bg-surface-container-high transition-all active:scale-95">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center mb-3 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">account_balance_wallet</span>
+</div>
+<span class="font-bold text-on-surface">JazzCash</span>
+<span class="text-xs text-on-surface-variant">Mobile Wallet</span>
+<div class="absolute top-4 right-4 w-4 h-4 rounded-full border-2 border-primary/40 group-focus:bg-primary group-focus:border-primary"></div>
+</button>
+<!-- EasyPaisa -->
+<button class="col-span-12 md:col-span-4 group relative flex flex-col items-start p-5 rounded-xl bg-surface-container-high border-2 border-primary/60 transition-all active:scale-95">
+<div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-primary text-2xl">payments</span>
+</div>
+<span class="font-bold text-on-surface">EasyPaisa</span>
+<span class="text-xs text-on-surface-variant">Instant Payout</span>
+<div class="absolute top-4 right-4 w-4 h-4 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-on-primary font-bold">check</span>
+</div>
+</button>
+<!-- Crypto -->
+<button class="col-span-12 md:col-span-4 group relative flex flex-col items-start p-5 rounded-xl bg-surface-container border border-outline-variant/15 hover:bg-surface-container-high transition-all active:scale-95">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center mb-3 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">currency_bitcoin</span>
+</div>
+<span class="font-bold text-on-surface">Crypto Wallet</span>
+<span class="text-xs text-on-surface-variant">Global Reach</span>
+<div class="absolute top-4 right-4 w-4 h-4 rounded-full border-2 border-primary/40 group-focus:bg-primary group-focus:border-primary"></div>
+</button>
+</div>
+</section>
+<!-- Contextual Input Fields -->
+<section class="bg-surface-container-low rounded-2xl p-8 space-y-6 shadow-xl">
+<div class="space-y-2">
+<label class="text-sm font-medium text-on-surface-variant ml-1">Account Holder Name</label>
+<div class="bg-surface-container-lowest rounded-xl p-4 flex items-center gap-3 border border-transparent focus-within:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+<input class="bg-transparent border-none focus:ring-0 text-on-surface w-full placeholder:text-outline/50" placeholder="e.g. John Doe" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-on-surface-variant ml-1">EasyPaisa Account Number</label>
+<div class="bg-surface-container-lowest rounded-xl p-4 flex items-center gap-3 border border-transparent focus-within:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">phone_iphone</span>
+<input class="bg-transparent border-none focus:ring-0 text-on-surface w-full placeholder:text-outline/50" placeholder="03XX XXXXXXX" type="tel"/>
+</div>
+<p class="text-[10px] text-secondary font-medium tracking-wide flex items-center gap-1 mt-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          VERIFIED PROVIDER DETECTED
+        </p>
+</div>
+</section>
+<!-- Verification Notes -->
+<section class="bg-primary/5 rounded-xl p-6 border border-primary/10 flex gap-4">
+<div class="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+</div>
+<div>
+<h4 class="text-primary font-bold text-sm mb-1">Withdrawal Verification Policy</h4>
+<p class="text-on-surface-variant text-xs leading-relaxed">
+          For your security, payout accounts are locked for 24 hours after being added. New accounts require a one-time SMS verification. Ensure your account name matches your registered identity.
+        </p>
+</div>
+</section>
+<!-- Action Button -->
+<div class="pt-4">
+<button class="w-full metallic-gradient py-5 rounded-xl text-on-primary font-bold text-lg shadow-[0_8px_30px_rgb(28,166,77,0.3)] active:scale-95 duration-200 flex items-center justify-center gap-2 group">
+<span>Save Account</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="text-center text-on-surface-variant text-[11px] mt-4 opacity-60">
+        By clicking save, you agree to our <a class="underline text-primary" href="#">Financial Services Agreement</a>.
+      </p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 border-t border-[#3e4a3d]/15 bg-[#0b1326] shadow-[0_-4px_20px_rgba(6,14,32,0.8)]">
+<div class="flex justify-around items-center h-20 px-4 pb-safe w-full">
+<a class="flex flex-col items-center justify-center text-[#bdcaba] opacity-70 hover:text-[#62df7d] hover:opacity-100 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-medium mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#bdcaba] opacity-70 hover:text-[#62df7d] hover:opacity-100 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-medium mt-1">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#62df7d] bg-[#171f33] rounded-xl px-3 py-1 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-medium mt-1">Payouts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#bdcaba] opacity-70 hover:text-[#62df7d] hover:opacity-100 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-wider font-medium mt-1">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>
